@@ -1,5 +1,4 @@
 package lac_17;
-import java.util.ArrayList;
 
 import java.util.*;
 public class Main {
@@ -7,35 +6,28 @@ public class Main {
         // TODO Auto-generated method stub
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
-        int arr [] = new int[n];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i]   = in.nextInt();
-        }
-//        Arrays.sort(arr);
-        int k = in.nextInt();
-        String st = new String();
-        for (int i = 0; i < arr.length; i++) {
-            st += String.valueOf(arr[i]);
-        }
-        sub_sequence(st,"",k);
+        int m = in.nextInt();
+        System.out.println("\n" + Rat_Maz(0,0,n,m,""));
 
     }
 
 
-    public static void sub_sequence(String quest, String ans,int k) {
-        if (quest.length()==0){
-            if (sum_sequence(0,ans,k)) {
-                for (int i = ans.length()-1; i >=0; i--) {
-                    System.out.print(ans.charAt(i)+ " ");
-                }
-                System.out.println();
-            }
-            return;
+    public static int Rat_Maz(int cc, int cr, int er,int ec, String ans) {
+        if (cc==ec-1 && cr == er-1  ){
+            System.out.print(ans+ " ");
+            return 1;
         }
-        char ch = quest.charAt(0);
+        if (cc>=ec || cr>=er){
+            return 0;
+        }
 
-        sub_sequence(quest.substring(1), ans,k);  // cda,  ""
-        sub_sequence(quest.substring(1),ans+ ch,k);  // cda, a
+       int ans1 = Rat_Maz(cc,cr+1,er,ec,ans+"V");  // cda, a
+        int ans2 = Rat_Maz(cc+1, cr,er,ec,ans+"H");  // cda,  ""
+        int ans3 =0;
+        if (cc==cr && er>1 && ec>1){
+        ans3 = Rat_Maz(cc+1,cr+1,er,ec,ans+"D");
+        }
+        return ans1+ans2+ans3;
     }
     public static boolean sum_sequence(int sum, String ans, int k) {
         for (int i = 0; i < ans.length(); i++) {
