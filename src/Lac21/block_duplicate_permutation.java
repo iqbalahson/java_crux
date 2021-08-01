@@ -1,4 +1,4 @@
-package lac_21;
+package Lac21;
 
 public class block_duplicate_permutation {
     public static void main(String[] args) {

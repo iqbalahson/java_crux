@@ -1,4 +1,4 @@
-package lac_19;
+package Lac19;
 
 public class fact_tail_recursion  {
     public static void main(String[] args) {

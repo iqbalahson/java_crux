@@ -1,4 +1,4 @@
-package lac_20;
+package Lac20;
 
 public class no_2_head_are_consecutive {
     public static void main(String[] args) {

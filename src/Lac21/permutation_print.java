@@ -1,4 +1,4 @@
-package lac_21;
+package Lac21;
 
 public class permutation_print {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package lac_19;
+package Lac19;
 
 public class first_occourance {
     public static void main(String[] args) {

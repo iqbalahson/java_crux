@@ -1,4 +1,4 @@
-package lac_20;
+package Lac20;
 
 public class Generate_valid_paranthesis {
     public static void main(String[] args) {

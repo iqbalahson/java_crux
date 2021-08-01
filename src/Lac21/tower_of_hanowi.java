@@ -1,4 +1,4 @@
-package lac_21;
+package Lac21;
 
 public class tower_of_hanowi {
     public static void main(String[] args) {
