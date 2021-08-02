@@ -2,7 +2,7 @@ package Lac20;
 
 public class sub_sequence_of_string {
     public static void main(String[] args) {
-        String st = "bcda";
+        String st = "abc";
         String ans = "";
         sub_sequence(st,ans);
     }

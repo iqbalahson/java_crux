@@ -2,7 +2,7 @@ package Lac20;
 
 public class no_2_head_are_consecutive {
     public static void main(String[] args) {
-        int n= 3;
+        int n= 5;
         String st = "";
         no_consecutive(n,st,false);
     }
