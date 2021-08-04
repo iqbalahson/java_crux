@@ -13,8 +13,8 @@ public class block_duplicate_permutation {
         }
         for (int i = 0; i < ques.length(); i++) {
             char ch = ques.charAt(i);
-            if (!visited[ch - 49]) {
-                visited[ch-49] =true;
+            if (!visited[ch]) {
+                visited[ch] =true;
                 String reg = ques.substring(0, i) + ques.substring(i + 1);
                 duplicate(reg, ans + ques.charAt(i));
             }
